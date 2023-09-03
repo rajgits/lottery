@@ -25,7 +25,7 @@ contract Lottery{
     }
     function picWinner()public{
         require(manager==msg.sender,"Your not manager");
-        require(players.length>=3,"Players are less than 3");
+        require(players.length>=3,"Making Players are less than 3");
         uint r = random();
         uint index = r%players.length;
         winner = players[index];
