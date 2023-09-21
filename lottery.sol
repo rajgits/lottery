@@ -29,7 +29,7 @@ contract Lottery{
         uint r = random();
         uint index = r%players.length;
         winner = players[index];
-        winner.transfer(getBalance());
+        winner.transfer(getBalance()); //transfering the balance
         players= new address payable[](0);//players arrays back to zero
     }
 }
